@@ -46,14 +46,14 @@ export default {
 
 	methods: {
 		fetchDataWithParam: function (ageParam) {
-			axios.get('http://localhost:8080/demo/api/endpoint.php?age='+ageParam).then( resp => {
+			axios.get('https://siposm.hu/demo/api/endpoint.php?age='+ageParam).then( resp => {
 				console.log('--- SUCCESS ---')
 				this.fetched_items = []
 				resp.data.forEach( x => this.fetched_items.push(x))
 			}).catch(()=> { console.log('--- ERROR ---') })
 		},
 		fetchAllData: function () {
-			axios.get('http://localhost:8080/demo/api/endpoint.php').then( resp => {
+			axios.get('https://siposm.hu/demo/api/endpoint.php').then( resp => {
 				console.log('--- SUCCESS ---')
 				this.fetched_items = []
 				resp.data.forEach( x => this.fetched_items.push(x))
